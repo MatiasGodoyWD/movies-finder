@@ -4,10 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Bulma!</title>
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/1c6a38c3f0.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <section class="section">
@@ -15,8 +18,30 @@
           
               <div class="is-flex is-flex-direction-column is-justify-content-center has-text-centered">
                 <h1 class="title">FIND YOUR FAVORITE MOVIE</h1>
-                <input type="text" name="search" class="input ">
+                <input type="text" name="search" class="input search">
+
+
+
+                
+                <div class="dropdown is-active">
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                          Dropdown item
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            Dropdown item
+                          </a>
+                          <a href="#" class="dropdown-item">
+                            Dropdown item
+                          </a>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
     </section>
+    <script src="main.js"></script>
   </body>
 </html>
