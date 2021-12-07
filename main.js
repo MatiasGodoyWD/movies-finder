@@ -7,7 +7,7 @@ const container = document.querySelector(".container");
 /* --------------------Data fetchers-------------------- */
 const getSearchData = async (value) => {
   const res = await fetch(
-    `http://www.omdbapi.com/?apikey=${API_KEY}&s=${value}`
+    `https://www.omdbapi.com/?apikey=${API_KEY}&s=${value}`
   );
   const data = await res.json();
 
@@ -16,7 +16,7 @@ const getSearchData = async (value) => {
 
 const getMovieById = async (id) => {
   const res = await fetch(
-    `http://www.omdbapi.com/?i=${id}&plot=full&apikey=${API_KEY}`
+    `https://www.omdbapi.com/?i=${id}&plot=full&apikey=${API_KEY}`
   );
   const data = await res.json();
 
