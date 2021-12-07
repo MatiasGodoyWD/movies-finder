@@ -41,7 +41,6 @@
 .card {
   width: 75%;
   height: 21rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dropdown {
@@ -55,6 +54,11 @@
 
 .card-content {
   min-width: 75%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.content {
+  width: 100%;
 }
 
 /*-----------------------------RESPONSIVE-----------------------------------------*/

@@ -98,7 +98,7 @@ const showMovie = async (e) => {
     <p class="title is-3">${movie.Title}</p>
     <p class="subtitle is-6">${movie.Year}</p>
 
-    <div class="content">
+    <div class="content has-text-centered">
      ${
        movie.Plot !== "N/A"
          ? movie.Plot
