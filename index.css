@@ -29,8 +29,8 @@
 
 .card-image {
   min-width: 15rem;
-  min-height: 20rem;
-  background-color: blue;
+  min-height: 21rem;
+  /* background-color: blue; */
 }
 
 .img {
@@ -55,4 +55,33 @@
 
 .card-content {
   min-width: 75%;
+}
+
+/*-----------------------------RESPONSIVE-----------------------------------------*/
+@media all and (min-width: 0px) and (max-width: 1024px) {
+  .dropdown {
+    width: 100%;
+  }
+  .card {
+    flex-direction: column;
+
+    height: auto;
+    width: 100%;
+  }
+
+  .card-image {
+    width: 100%;
+  }
+  .card-content {
+    border: 3px solid rgba(0, 0, 0, 0.068);
+  }
+
+  .card-footer {
+    flex-direction: column;
+  }
+  @media all and (min-width: 769px) and (max-width: 1024px) {
+    .card {
+      width: 80%;
+    }
+  }
 }

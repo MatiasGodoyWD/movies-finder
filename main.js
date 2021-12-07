@@ -45,8 +45,12 @@ const showSearchResults = async (e) => {
  </li>`
        : movies
            .map((movie) => {
-             return `<li data-id="${movie.imdbID}" class="dropdown-item is-flex is-align-items-center is-clickable is-size-4">
-    <img class="image is-32x32 mr-5" src="${movie.Poster}">  ${movie.Title}
+             return `<li data-id="${
+               movie.imdbID
+             }" class="dropdown-item is-flex is-align-items-center is-clickable is-size-4 is-size-5-mobile">
+    <img class="image is-32x32 mr-5" src="${
+      movie.Poster !== "N/A" ? movie.Poster : "./img/no-image.jpg"
+    }">  ${movie.Title}
   </li>`;
            })
            .join("")
@@ -62,17 +66,23 @@ const showMovie = async (e) => {
   }
   const id = e.target.dataset.id;
   const movie = await getMovieById(id);
+  console.log(movie);
   dropdown.classList.remove("is-active");
   search.value = "";
   let newCard = document.createElement("div");
-  newCard.classList.add("card", "is-flex", "is-flex-direction-row", "mt-6");
+  newCard.classList.add(
+    "card",
+    "is-flex",
+    "is-flex-direction-row-desktop",
+    "mt-6"
+  );
   newCard.innerHTML = `
 
   
   <div class="card-image">
     <img
       class="img"
-      src="${movie.Poster}"
+      src="${movie.Poster !== "N/A" ? movie.Poster : "./img/no-image.jpg"}"
       alt="Placeholder image"
     />
   </div>
@@ -89,7 +99,11 @@ const showMovie = async (e) => {
     <p class="subtitle is-6">${movie.Year}</p>
 
     <div class="content">
-     ${movie.Plot}
+     ${
+       movie.Plot !== "N/A"
+         ? movie.Plot
+         : "The plot of this movie is currently unavailable."
+     }
     </div>
     <footer class="card-footer">
       <li href="#" class="card-footer-item">
