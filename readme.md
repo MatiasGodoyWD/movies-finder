@@ -8,4 +8,4 @@
 
 # Link para preview
 
-    https://algoquever.vercel.app/
+    https://movies-finder-kappa.vercel.app/

@@ -82,7 +82,9 @@
 
   .card-footer {
     flex-direction: column;
+    border: 2px solid rgba(114, 113, 113, 0.144);
   }
+
   @media all and (min-width: 769px) and (max-width: 1024px) {
     .card {
       width: 80%;
